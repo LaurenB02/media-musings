@@ -9,7 +9,7 @@
 body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;
-  background-color:darkseagreen;
+  background: linear-gradient(darkseagreen, rgb(67, 75, 67));
   padding: 0.5rem;
 }
 	
@@ -17,12 +17,13 @@ div.wrapper {
   width: 960px;
   margin: 1em auto 0 auto;
   border: 2px solid black;
-  box-shadow: .5em .5em .5em .5em;
+  box-shadow: 2px 2px 6px black;
   background-color: white;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 
@@ -326,4 +327,65 @@ footer a {
 
 /* PHONE
 ---------------------------------------*/
+@media (max-width: 480px) {
 
+  div.wrapper {
+    width: 100%;
+    margin: 0%;
+  }
+
+  header {
+    margin: 0;
+    padding: 1em;
+  }
+
+  nav.topnav {
+    width: 98%;
+    margin-bottom: .5em;
+  }
+
+  nav.topnav ul {
+    flex-direction: column;
+  }
+
+  nav.topnav li {
+    border-bottom: 1px solid black;
+  }
+
+  nav.topnav li:last-of-type {
+    border: none;
+  }
+
+  main.homepage {
+    grid-template-columns: 1fr;
+  }
+
+  article.blog {
+    grid-column: 1/2;
+  }
+
+  main.homepage aside {
+    display: none;
+  }
+
+  section.campus {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  section.campus h3 {
+    font-size: 150%;
+  }
+
+  section.campus figure {
+    grid-template-columns: 1fr 4fr;
+    background-color: white;
+    padding: 0 1em 0 0;
+    border-radius: 1em;
+  }
+
+  section.campus figcaption {
+    font-size: 130%;
+    line-height: 1.4;
+  }
+}
